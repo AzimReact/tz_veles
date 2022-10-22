@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600&display=swap');
+:root {
+    --violet: #430063;
+    --violet-btn: #640075;
+    --light-gray: #f5f5f5;
+    --gray: #B8B9C1;
+    --dark-gray: #414357;
+};
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+};  
+a{
+    text-decoration: none;
+}
+button{
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}   
+
+.container{
+    max-width: 1192px;
+    width: 82.8%;
+    margin: 0 auto;
+    @media (max-width: 1024px) {
+        width: calc(100% - 40px);
+        margin: 0px 20px;
+    }
+
+    .content{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        gap: 10%;
+        @media (max-width: 1024px) {
+            justify-content: space-between;
+            gap: 20px;   
+        }
+        @media (max-width: 768px) {
+            justify-content: center;
+            gap: 0px;   
+        }
+        .logo{
+            position: absolute;
+            top: 46px;
+            cursor: pointer;
+            @media (max-width: 768px) {
+                left: 7%;
+                top: 36px;
+            }
+            @media (max-width: 550px) {
+                width: 76px;
+                left: 4%;
+                top: 30px;
+            }
+        }
+        .video{
+            aspect-ratio: 16 / 9;
+            width: 60%;
+            border-radius: 10px;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        .rigth{
+            width: 336px;
+            @media (max-width: 768px) {
+                width: calc(100% - 100px);
+            }
+            @media (max-width: 550px) {
+                width: calc(100% - 40px);
+                display: flex;
+                flex-direction: column;
+            }
+            h1{
+                font-family: 'Montserrat';
+                font-weight: 600;
+                color:#11142D;
+                font-size: 24px;
+            }
+            h1::after{
+                content: 'С чего начать?';
+                @media (max-width: 768px) {
+                    content: 'Вход';
+                }
+            }
+            p{
+                font-family: 'inter';   
+                font-size: 14px;
+                white-space: pre-line;
+                margin: 10px 0px 20px 0px;
+                color:  var(--dark-gray);
+                @media (max-width: 400px) {
+                    margin: 10px 0px;
+                    font-size: 13px;
+                }
+            }
+            .video-mobile{
+                display: none;
+                aspect-ratio: 16 / 9;
+                width: 100%;
+                border-radius: 10px;
+                margin: 20px 0px;
+                @media (max-width: 768px) {
+                    display: block;
+                }
+                @media (max-width: 550px) {
+                    margin: 10px 0px;
+                }
+            }
+            button{
+                width: 335px;
+                padding: 12px 0px;
+                margin-top: 8px;
+                border-radius: 12px;
+                background-color: var(--violet-btn);
+                color: #FFFFFF;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+            .lines-text{
+                position: relative;
+                text-align: center;
+                margin: 20px 0px;
+                color:  var(--gray);
+                div{
+                    width: 110px;
+                    border-bottom: 1px solid #E4E4E4;
+                    position: absolute;
+                    top: 50%;
+                    @media (max-width: 768px) {
+                        width: 30%;
+                    }   
+                }
+                .rigth{
+                    right: 0;
+                }
+            }
+            .icons{
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                a{
+                    cursor: pointer;
+                    .icon:hover path{
+                        fill: var(--violet);
+                    }
+                }
+            }
+            .last-btn{
+                color: #808191;
+                background-color: transparent;
+                margin-top: 20px;
+            }
+            .last-btn:hover{
+                background-color: var(--light-gray);
+                transition: 0.5s;
+            }
+        }
+    }
+
+};
+
+
+
